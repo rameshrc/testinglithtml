@@ -1,0 +1,26 @@
+{
+  "name": "unit-test-lit-element",
+  "version": "1.0.0",
+  "description": "Load and unit test lit-element projects",
+  "scripts": {
+    "cypress:open": "../../node_modules/.bin/cypress open",
+    "start": "concurrently --kill-others --names tsc,es-dev-server \"es-dev-server index.html --node-resolve --open --watch\"",
+    "test:ci": "npm run cypress:run",
+    "test:ci:chrome": "npm run cypress:run -- --browser chrome",
+    "test:ci:windows": "bin-up cypress run"
+  },
+  "dependencies": {
+    "lit-element": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "13.11.1",
+    "chrome-remote-interface": "0.28.2",
+    "concurrently": "^5.1.0",
+    "cypress": "^4.10.0",
+    "cypress-nhover": "1.0.0",
+    "es-dev-server": "^1.54.1",
+    "start-server-and-test": "^1.11.0",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.5"
+  }
+}
